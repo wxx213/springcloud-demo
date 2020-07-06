@@ -9,8 +9,9 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/zipkin?autoReconnect=true
     username: root
-    password: 1qaz2wsx
+    password: wxx123
     driverClassName: com.mysql.jdbc.Driver
+    useSSL: false
 zipkin:
   storage:
     type: mysql
