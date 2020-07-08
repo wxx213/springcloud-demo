@@ -52,7 +52,45 @@
             <version>3.3.6</version>
         </dependency>
 
-    </dependencies>
+        <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.15</version>
+          <exclusions> 
+             <exclusion>               
+                <groupId>javax.jms</groupId> 
+                <artifactId>jms</artifactId> 
+             </exclusion> 
+             <exclusion>                
+                 <groupId>com.sun.jdmk</groupId>           
+                  <artifactId>jmxtools</artifactId> 
+             </exclusion> 
+             <exclusion>             
+                  <groupId>com.sun.jmx</groupId> 
+                  <artifactId>jmxri</artifactId> 
+             </exclusion>
+          </exclusions>
+        </dependency>
+     </dependencies>
 
+     <build>
+          <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.lynn.demo.Application</mainClass>
+                </configuration>
+            </plugin>
+          </plugins>
+    </build>
 
 </project>
