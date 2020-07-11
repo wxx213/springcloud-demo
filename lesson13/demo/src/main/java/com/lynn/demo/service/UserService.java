@@ -18,10 +18,10 @@ public class UserService {
     @Transactional
     public void addUser(User user)throws Exception{
         userMapper1.addUser(user.getName(),user.getAge());
-        String bb = null;
-        if(bb.equals("aa")){
-            System.out.println("test");
-        }
+        // String bb = null;
+        // if(bb.equals("aa")){
+        //     System.out.println("test");
+        // }
         userMapper2.addUser(user.getName(),user.getAge());
     }
 }

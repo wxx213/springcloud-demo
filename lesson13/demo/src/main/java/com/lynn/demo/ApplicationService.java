@@ -1,4 +1,4 @@
-package com.lynn.demo.test;
+package com.lynn.demo;
 
 import com.lynn.demo.Application;
 import com.lynn.demo.entity.User;
@@ -6,19 +6,18 @@ import com.lynn.demo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = Application.class)
-public class TestDB {
+@Component
+public class ApplicationService implements ApplicationRunner {
+	@Autowired
+	private UserService userService;
 
-    @Autowired
-    private UserService userService;
-
-    @Test
-    public void test(){
-        User user = new User();
+	@Override
+    public void run(ApplicationArguments args) throws Exception {
+		User user = new User();
         user.setName("lynn");
         user.setAge(10);
         try {
@@ -26,5 +25,5 @@ public class TestDB {
         }catch (Exception e){
             e.printStackTrace();
         }
-    }
+	}
 }
