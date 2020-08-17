@@ -15,7 +15,8 @@ public class ApplicationService implements ApplicationRunner {
 	@Override
     public void run(ApplicationArguments args) throws Exception {
 		try {
-            System.out.println("This is in ApplicationRunner : " + apiService.index());
+            System.out.println("This is in ApplicationRunner1 : " + apiService.index());
+			System.out.println("This is in ApplicationRunner2 : " + apiService.index());
         }catch (Exception e){
             e.printStackTrace();
         }
