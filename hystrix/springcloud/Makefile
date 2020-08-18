@@ -11,8 +11,11 @@ build: clean
 eurekaserver_exec:
 	mvn exec:java -pl eurekaserver -Dexec.mainClass="com.lynn.Application"
 
-eurekaclient_exec:
-	mvn exec:java -pl eurekaclient -Dexec.mainClass="com.lynn.Application"
+eurekaclient1_exec:
+	mvn exec:java -pl eurekaclient1 -Dexec.mainClass="com.lynn.Application"
+
+eurekaclient2_exec:
+	mvn exec:java -pl eurekaclient2 -Dexec.mainClass="com.lynn.Application"
 
 feign_exec:
 	 mvn exec:java -pl feign -Dexec.mainClass="com.lynn.feign.Application"
