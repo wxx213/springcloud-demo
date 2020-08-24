@@ -20,6 +20,7 @@ public class ApiGlobalFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String token = exchange.getRequest().getQueryParams().getFirst("token");
+		/*
         if (StringUtils.isBlank(token)) {
             ServerHttpResponse response = exchange.getResponse();
             Map<String,Object> message = new HashMap<>();
@@ -31,6 +32,7 @@ public class ApiGlobalFilter implements GlobalFilter {
             response.getHeaders().add("Content-Type", "text/json;charset=UTF-8");
             return response.writeWith(Mono.just(buffer));
         }
+		*/
         return chain.filter(exchange);
     }
 }
