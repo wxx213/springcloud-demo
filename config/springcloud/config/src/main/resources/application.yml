@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://gitee.com/wxx213/SpringCloudLesson.git #配置git仓库地址
-          searchPaths: lesson9/config #配置仓库路径
+          searchPaths: config/config #配置仓库路径
           username: wxx213 #访问git仓库的用户名
           password:  #访问git仓库的用户密码
       label: master #配置仓库的分支
