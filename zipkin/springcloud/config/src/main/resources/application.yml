@@ -12,7 +12,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/wxx213/SpringCloudLesson.git #配置git仓库地址
+          # uri: https://github.com/wxx213/SpringCloudLesson.git #配置git仓库地址
+          uri: https://gitee.com/wxx213/SpringCloudLesson.git
           searchPaths: zipkin/config #配置仓库路径
           username: wxx213 #访问git仓库的用户名
           password:  #访问git仓库的用户密码
