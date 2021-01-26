@@ -1,8 +1,8 @@
 
-build:
+build: clean
 	mvn package
 
-exec:
+exec: build
 	mvn exec:java -Dexec.mainClass="com.lynn.demo.Application"
 
 clean:
