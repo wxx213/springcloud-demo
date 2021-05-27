@@ -6,6 +6,8 @@ import org.springframework.context.ApplicationContext;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.concurrent.CountDownLatch;
+
 class Test {
     public void testAddForum() {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -16,6 +18,11 @@ class Test {
         forum.setForumDesc("1二手货物的交流论坛。");
         forumDao.addForum(forum);
         System.out.println("wxx id: "+ forum.getForumId());
+        try {
+            new CountDownLatch(1).await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 
