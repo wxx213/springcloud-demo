@@ -16,6 +16,8 @@ public class ForumService1 {
 		template.execute(new TransactionCallbackWithoutResult() {
 			protected void doInTransactionWithoutResult(TransactionStatus status) {
 				forumDao.addForum(forum);
+				// 后面的任何地方抛出异常，都会导致已有的提交回滚
+				// int a = 1/0;
 			}
 		});
 
