@@ -1,4 +1,4 @@
-package com.smart.test;
+package com.test;
 
 import com.smart.dao.ForumDao;
 import com.smart.domain.Forum;
