@@ -1,5 +1,6 @@
 package com.test;
 
+import com.basic.api.ApiTest;
 import com.smart.dao.ForumDao;
 import com.smart.domain.Forum;
 import com.smart.service.ForumService1;
@@ -25,6 +26,7 @@ class Test{
 }
 public class Main {
     public static void main(String[] args) {
-        new Test().testForumService();
+        // new Test().testForumService();
+        new ApiTest().testApi(args);
     }
 }

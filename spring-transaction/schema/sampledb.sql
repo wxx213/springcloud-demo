@@ -38,6 +38,18 @@ create table t_forum
 ;
 
 /*==============================================================*/
+/* Table: blog                                               */
+/*==============================================================*/
+create table blog
+(
+   id             int(11) not null auto_increment,
+   author           varchar(150) not null default '',
+   title          varchar(255) default NULL,
+   content           varchar(255) default NULL,
+   primary key (id, author)
+);
+
+/*==============================================================*/
 /* Table: t_post                                                */
 /*==============================================================*/
 create table t_post
@@ -92,10 +104,10 @@ create index IDX_TOPIC_TITLE on t_topic
 );
 
 
-insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (2, 'Ö÷Ìâ1', 1, '1-1-1 0:0:1', 166, 1);
+insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (2, 'ï¿½ï¿½ï¿½ï¿½1', 1, '1-1-1 0:0:1', 166, 1);
 
-insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (1, 'Ö÷Ìâ2', 1, '1-1-1 0:0:0', 100, 49);
+insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (1, 'ï¿½ï¿½ï¿½ï¿½2', 1, '1-1-1 0:0:0', 100, 49);
 
-insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (3, 'Ö÷Ìâ3', 1, '1-1-1 0:0:1', 130, 70);
+insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (3, 'ï¿½ï¿½ï¿½ï¿½3', 1, '1-1-1 0:0:1', 130, 70);
 
-insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (0, 'Ö÷Ìâ4', 2, '1-1-1 0:0:2', 166, 22);
+insert into t_topic (forum_id, topic_title, user_id, topic_time, topic_views, topic_replies) values (0, 'ï¿½ï¿½ï¿½ï¿½4', 2, '1-1-1 0:0:2', 166, 22);
