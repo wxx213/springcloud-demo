@@ -1,5 +1,6 @@
 package com.test;
 
+import com.basic.api.ApiTest;
 import com.smart.dao.ForumDao;
 import com.smart.domain.Forum;
 import org.springframework.context.ApplicationContext;
@@ -28,6 +29,7 @@ class Test {
 
 public class Main {
     public static void main(String[] args) {
-        new Test().testAddForum();
+        // new Test().testAddForum();
+        new ApiTest().testApi();
     }
 }
