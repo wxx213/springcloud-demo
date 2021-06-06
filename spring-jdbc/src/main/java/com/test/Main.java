@@ -31,5 +31,10 @@ public class Main {
     public static void main(String[] args) {
         // new Test().testAddForum();
         new ApiTest().testApi();
+        try {
+            new CountDownLatch(1).await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
